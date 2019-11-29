@@ -1,0 +1,152 @@
+EESchema Schematic File Version 4
+LIBS:bambule-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:LED_Series D?
+U 1 1 5DE1596B
+P 5400 3400
+F 0 "D?" H 5400 3300 50  0000 C CNN
+F 1 "LED_Series" H 5400 3266 50  0001 C CNN
+F 2 "" H 5300 3400 50  0001 C CNN
+F 3 "~" H 5300 3400 50  0001 C CNN
+	1    5400 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L device.farm:AL5801 U?
+U 1 1 5DE15AD4
+P 6150 3200
+F 0 "U?" H 6150 3665 50  0000 C CNN
+F 1 "AL5801" H 6150 3574 50  0000 C CNN
+F 2 "" H 5850 3400 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AL5801.pdf" H 5850 3400 50  0001 C CNN
+	1    6150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5DE15BE4
+P 4050 3200
+F 0 "J?" H 3944 2775 50  0000 C CNN
+F 1 "Conn_01x04_Female" H 3944 2866 50  0000 C CNN
+F 2 "" H 4050 3200 50  0001 C CNN
+F 3 "~" H 4050 3200 50  0001 C CNN
+	1    4050 3200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5150 3400 5050 3400
+Text Label 5000 3400 2    50   ~ 0
+VBUS
+$Comp
+L Device:R R?
+U 1 1 5DE15C56
+P 5400 3000
+F 0 "R?" V 5300 2900 50  0000 C CNN
+F 1 "430k 1%" V 5300 3150 50  0000 C CNN
+F 2 "" V 5330 3000 50  0001 C CNN
+F 3 "~" H 5400 3000 50  0001 C CNN
+	1    5400 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DE15C9B
+P 6800 3500
+F 0 "R?" V 6900 3400 50  0000 C CNN
+F 1 "4R3 1%" V 6900 3650 50  0000 C CNN
+F 2 "" V 6730 3500 50  0001 C CNN
+F 3 "~" H 6800 3500 50  0001 C CNN
+	1    6800 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DE15D9C
+P 6500 3000
+F 0 "#PWR?" H 6500 2750 50  0001 C CNN
+F 1 "GND" V 6505 2872 50  0000 R CNN
+F 2 "" H 6500 3000 50  0001 C CNN
+F 3 "" H 6500 3000 50  0001 C CNN
+	1    6500 3000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5800 3200 5750 3200
+Wire Wire Line
+	5750 3200 5750 3600
+Wire Wire Line
+	5750 3600 6550 3600
+Wire Wire Line
+	6550 3600 6550 3500
+Wire Wire Line
+	6550 3400 6500 3400
+Connection ~ 6550 3400
+Wire Wire Line
+	5650 3400 5800 3400
+$Comp
+L Device:R R?
+U 1 1 5DE160F3
+P 6800 3400
+F 0 "R?" V 6700 3300 50  0000 C CNN
+F 1 "4R3 1%" V 6700 3550 50  0000 C CNN
+F 2 "" V 6730 3400 50  0001 C CNN
+F 3 "~" H 6800 3400 50  0001 C CNN
+	1    6800 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 3000 5050 3400
+Connection ~ 5050 3400
+Wire Wire Line
+	5050 3400 5000 3400
+Text Label 4250 3300 0    50   ~ 0
+GND
+Text Label 4250 3100 0    50   ~ 0
+GND
+Text Label 4250 3200 0    50   ~ 0
+VBUS
+Text Label 4250 3000 0    50   ~ 0
+VBUS
+NoConn ~ 6500 3200
+Wire Wire Line
+	5550 3000 5800 3000
+Wire Wire Line
+	5050 3000 5250 3000
+Wire Wire Line
+	6550 3400 6650 3400
+Wire Wire Line
+	6650 3500 6550 3500
+Connection ~ 6550 3500
+Wire Wire Line
+	6550 3500 6550 3400
+Wire Wire Line
+	6950 3500 6950 3450
+$Comp
+L power:GND #PWR?
+U 1 1 5DE17906
+P 6950 3450
+F 0 "#PWR?" H 6950 3200 50  0001 C CNN
+F 1 "GND" V 6955 3322 50  0000 R CNN
+F 2 "" H 6950 3450 50  0001 C CNN
+F 3 "" H 6950 3450 50  0001 C CNN
+	1    6950 3450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6950 3450
+Wire Wire Line
+	6950 3450 6950 3400
+$EndSCHEMATC
