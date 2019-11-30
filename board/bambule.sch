@@ -15,69 +15,58 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:LED_Series D?
+L Device:LED_Series D1
 U 1 1 5DE1596B
 P 5400 3400
-F 0 "D?" H 5400 3300 50  0000 C CNN
+F 0 "D1" H 5400 3300 50  0000 C CNN
 F 1 "LED_Series" H 5400 3266 50  0001 C CNN
-F 2 "" H 5300 3400 50  0001 C CNN
+F 2 "device.farm:LED_BXRE_V10" H 5300 3400 50  0001 C CNN
 F 3 "~" H 5300 3400 50  0001 C CNN
 	1    5400 3400
 	-1   0    0    1   
 $EndComp
 $Comp
-L device.farm:AL5801 U?
+L device.farm:AL5801 U1
 U 1 1 5DE15AD4
 P 6150 3200
-F 0 "U?" H 6150 3665 50  0000 C CNN
+F 0 "U1" H 6150 3665 50  0000 C CNN
 F 1 "AL5801" H 6150 3574 50  0000 C CNN
-F 2 "" H 5850 3400 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5850 3400 50  0001 C CNN
 F 3 "https://www.diodes.com/assets/Datasheets/AL5801.pdf" H 5850 3400 50  0001 C CNN
 	1    6150 3200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x04_Female J?
-U 1 1 5DE15BE4
-P 4050 3200
-F 0 "J?" H 3944 2775 50  0000 C CNN
-F 1 "Conn_01x04_Female" H 3944 2866 50  0000 C CNN
-F 2 "" H 4050 3200 50  0001 C CNN
-F 3 "~" H 4050 3200 50  0001 C CNN
-	1    4050 3200
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	5150 3400 5050 3400
 Text Label 5000 3400 2    50   ~ 0
 VBUS
 $Comp
-L Device:R R?
+L Device:R R1
 U 1 1 5DE15C56
 P 5400 3000
-F 0 "R?" V 5300 2900 50  0000 C CNN
+F 0 "R1" V 5300 2900 50  0000 C CNN
 F 1 "430k 1%" V 5300 3150 50  0000 C CNN
-F 2 "" V 5330 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5330 3000 50  0001 C CNN
 F 3 "~" H 5400 3000 50  0001 C CNN
 	1    5400 3000
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R3
 U 1 1 5DE15C9B
 P 6800 3500
-F 0 "R?" V 6900 3400 50  0000 C CNN
+F 0 "R3" V 6900 3400 50  0000 C CNN
 F 1 "4R3 1%" V 6900 3650 50  0000 C CNN
-F 2 "" V 6730 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 3500 50  0001 C CNN
 F 3 "~" H 6800 3500 50  0001 C CNN
 	1    6800 3500
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5DE15D9C
 P 6500 3000
-F 0 "#PWR?" H 6500 2750 50  0001 C CNN
+F 0 "#PWR0101" H 6500 2750 50  0001 C CNN
 F 1 "GND" V 6505 2872 50  0000 R CNN
 F 2 "" H 6500 3000 50  0001 C CNN
 F 3 "" H 6500 3000 50  0001 C CNN
@@ -98,12 +87,12 @@ Connection ~ 6550 3400
 Wire Wire Line
 	5650 3400 5800 3400
 $Comp
-L Device:R R?
+L Device:R R2
 U 1 1 5DE160F3
 P 6800 3400
-F 0 "R?" V 6700 3300 50  0000 C CNN
+F 0 "R2" V 6700 3300 50  0000 C CNN
 F 1 "4R3 1%" V 6700 3550 50  0000 C CNN
-F 2 "" V 6730 3400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 3400 50  0001 C CNN
 F 3 "~" H 6800 3400 50  0001 C CNN
 	1    6800 3400
 	0    1    1    0   
@@ -113,13 +102,9 @@ Wire Wire Line
 Connection ~ 5050 3400
 Wire Wire Line
 	5050 3400 5000 3400
-Text Label 4250 3300 0    50   ~ 0
+Text Label 4250 3200 0    50   ~ 0
 GND
 Text Label 4250 3100 0    50   ~ 0
-GND
-Text Label 4250 3200 0    50   ~ 0
-VBUS
-Text Label 4250 3000 0    50   ~ 0
 VBUS
 NoConn ~ 6500 3200
 Wire Wire Line
@@ -136,10 +121,10 @@ Wire Wire Line
 Wire Wire Line
 	6950 3500 6950 3450
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0102
 U 1 1 5DE17906
 P 6950 3450
-F 0 "#PWR?" H 6950 3200 50  0001 C CNN
+F 0 "#PWR0102" H 6950 3200 50  0001 C CNN
 F 1 "GND" V 6955 3322 50  0000 R CNN
 F 2 "" H 6950 3450 50  0001 C CNN
 F 3 "" H 6950 3450 50  0001 C CNN
@@ -149,4 +134,94 @@ $EndComp
 Connection ~ 6950 3450
 Wire Wire Line
 	6950 3450 6950 3400
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5DE17CF0
+P 4150 3650
+F 0 "#FLG0101" H 4150 3725 50  0001 C CNN
+F 1 "PWR_FLAG" V 4150 3778 50  0000 L CNN
+F 2 "" H 4150 3650 50  0001 C CNN
+F 3 "~" H 4150 3650 50  0001 C CNN
+	1    4150 3650
+	0    -1   -1   0   
+$EndComp
+Text Label 4150 3650 0    50   ~ 0
+VBUS
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5DE17DDA
+P 4150 3750
+F 0 "#FLG0102" H 4150 3825 50  0001 C CNN
+F 1 "PWR_FLAG" V 4150 3878 50  0000 L CNN
+F 2 "" H 4150 3750 50  0001 C CNN
+F 3 "~" H 4150 3750 50  0001 C CNN
+	1    4150 3750
+	0    -1   -1   0   
+$EndComp
+Text Label 4150 3750 0    50   ~ 0
+GND
+Text Label 4950 4550 0    50   ~ 0
+HEATSINK
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5DE18D06
+P 4550 4450
+F 0 "H1" H 4550 4650 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4100 4200 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 4550 4450 50  0001 C CNN
+F 3 "~" H 4550 4450 50  0001 C CNN
+	1    4550 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5DE18D8A
+P 4800 4450
+F 0 "H2" H 4800 4650 50  0000 L CNN
+F 1 "MountingHole_Pad" H 4900 4410 50  0001 L CNN
+F 2 "MountingHole:MountingHole_2.5mm_Pad" H 4800 4450 50  0001 C CNN
+F 3 "~" H 4800 4450 50  0001 C CNN
+	1    4800 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 4550 4800 4550
+Wire Wire Line
+	4800 4550 4950 4550
+Connection ~ 4800 4550
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5DE19226
+P 4150 3850
+F 0 "#FLG0103" H 4150 3925 50  0001 C CNN
+F 1 "PWR_FLAG" V 4150 3978 50  0000 L CNN
+F 2 "" H 4150 3850 50  0001 C CNN
+F 3 "~" H 4150 3850 50  0001 C CNN
+	1    4150 3850
+	0    -1   -1   0   
+$EndComp
+Text Label 4150 3850 0    50   ~ 0
+HEATSINK
+$Comp
+L Connector:Conn_01x01_Female J2
+U 1 1 5DE1D65B
+P 4050 3200
+F 0 "J2" H 4150 3200 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3944 3066 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 4050 3200 50  0001 C CNN
+F 3 "~" H 4050 3200 50  0001 C CNN
+	1    4050 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J1
+U 1 1 5DE1D79D
+P 4050 3100
+F 0 "J1" H 4150 3100 50  0000 C CNN
+F 1 "Conn_01x01_Female" H 3944 2966 50  0001 C CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 4050 3100 50  0001 C CNN
+F 3 "~" H 4050 3100 50  0001 C CNN
+	1    4050 3100
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
