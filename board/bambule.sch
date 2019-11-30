@@ -25,17 +25,6 @@ F 3 "~" H 5300 3400 50  0001 C CNN
 	1    5400 3400
 	-1   0    0    1   
 $EndComp
-$Comp
-L device.farm:AL5801 U1
-U 1 1 5DE15AD4
-P 6150 3200
-F 0 "U1" H 6150 3665 50  0000 C CNN
-F 1 "AL5801" H 6150 3574 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5850 3400 50  0001 C CNN
-F 3 "https://www.diodes.com/assets/Datasheets/AL5801.pdf" H 5850 3400 50  0001 C CNN
-	1    6150 3200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5150 3400 5050 3400
 Text Label 5000 3400 2    50   ~ 0
@@ -49,17 +38,6 @@ F 1 "430k 1%" V 5300 3150 50  0000 C CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5330 3000 50  0001 C CNN
 F 3 "~" H 5400 3000 50  0001 C CNN
 	1    5400 3000
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5DE15C9B
-P 6800 3500
-F 0 "R3" V 6900 3400 50  0000 C CNN
-F 1 "4R3 1%" V 6900 3650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 3500 50  0001 C CNN
-F 3 "~" H 6800 3500 50  0001 C CNN
-	1    6800 3500
 	0    1    1    0   
 $EndComp
 $Comp
@@ -79,8 +57,6 @@ Wire Wire Line
 	5750 3200 5750 3600
 Wire Wire Line
 	5750 3600 6550 3600
-Wire Wire Line
-	6550 3600 6550 3500
 Wire Wire Line
 	6550 3400 6500 3400
 Connection ~ 6550 3400
@@ -113,27 +89,17 @@ Wire Wire Line
 	5050 3000 5250 3000
 Wire Wire Line
 	6550 3400 6650 3400
-Wire Wire Line
-	6650 3500 6550 3500
-Connection ~ 6550 3500
-Wire Wire Line
-	6550 3500 6550 3400
-Wire Wire Line
-	6950 3500 6950 3450
 $Comp
 L power:GND #PWR0102
 U 1 1 5DE17906
-P 6950 3450
-F 0 "#PWR0102" H 6950 3200 50  0001 C CNN
-F 1 "GND" V 6955 3322 50  0000 R CNN
-F 2 "" H 6950 3450 50  0001 C CNN
-F 3 "" H 6950 3450 50  0001 C CNN
-	1    6950 3450
+P 7150 3600
+F 0 "#PWR0102" H 7150 3350 50  0001 C CNN
+F 1 "GND" V 7155 3472 50  0000 R CNN
+F 2 "" H 7150 3600 50  0001 C CNN
+F 3 "" H 7150 3600 50  0001 C CNN
+	1    7150 3600
 	0    -1   -1   0   
 $EndComp
-Connection ~ 6950 3450
-Wire Wire Line
-	6950 3450 6950 3400
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5DE17CF0
@@ -223,5 +189,58 @@ F 2 "Connector_Wire:SolderWirePad_1x01_Drill2mm" H 4050 3100 50  0001 C CNN
 F 3 "~" H 4050 3100 50  0001 C CNN
 	1    4050 3100
 	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5DE28E33
+P 6800 3600
+F 0 "R3" V 6700 3500 50  0000 C CNN
+F 1 "4R3 1%" V 6700 3750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 3600 50  0001 C CNN
+F 3 "~" H 6800 3600 50  0001 C CNN
+	1    6800 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5DE28E5D
+P 6800 3800
+F 0 "R4" V 6700 3700 50  0000 C CNN
+F 1 "4R3 1%" V 6700 3950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6730 3800 50  0001 C CNN
+F 3 "~" H 6800 3800 50  0001 C CNN
+	1    6800 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 3400 6550 3600
+Wire Wire Line
+	6550 3600 6550 3800
+Wire Wire Line
+	6550 3800 6650 3800
+Connection ~ 6550 3600
+Wire Wire Line
+	6650 3600 6550 3600
+Wire Wire Line
+	6950 3400 7150 3400
+Wire Wire Line
+	7150 3400 7150 3600
+Wire Wire Line
+	7150 3800 6950 3800
+Wire Wire Line
+	6950 3600 7150 3600
+Connection ~ 7150 3600
+Wire Wire Line
+	7150 3600 7150 3800
+$Comp
+L device.farm:AL5801 U1
+U 1 1 5DE15AD4
+P 6150 3200
+F 0 "U1" H 6150 3665 50  0000 C CNN
+F 1 "AL5801" H 6150 3574 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6_Handsoldering" H 5850 3400 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AL5801.pdf" H 5850 3400 50  0001 C CNN
+	1    6150 3200
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
